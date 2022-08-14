@@ -1,0 +1,217 @@
+/* Start global rules */
+/* Start variables */
+:root {
+  --Desaturated-Red: hsl(0, 36%, 70%);
+  --Soft-Red: hsl(0, 93%, 68%);
+  --Dark-Grayish-Red: hsl(0, 6%, 24%);
+  --Linear: 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+  --Linear: 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+}
+
+/* End variables */
+* {
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  overflow-x: hidden;
+  height: 110vh;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* End global rules */
+/* Start main */
+.main {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+}
+.main .text-sect {
+  display: flex;
+  flex-direction: column;
+  padding: 4em 9em;
+  position: relative;
+  background-image: url(/images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -80px;
+}
+.main .text-sect .logo-cont {
+  margin-bottom: 10em;
+}
+.main .text-sect h1 {
+  text-transform: uppercase;
+  font-size: 76.8px;
+  font-weight: 500;
+  letter-spacing: 15px;
+  margin: 0;
+}
+.main .text-sect h1 span {
+  font-weight: 300;
+  color: var(--Desaturated-Red);
+}
+.main .text-sect p {
+  color: var(--Desaturated-Red);
+  line-height: 1.8;
+  max-width: 32vw;
+  margin: 0;
+  margin-top: 1em;
+  font-size: 18.432px;
+}
+.main form {
+  margin: 0;
+  margin-top: 2em;
+}
+.main form div {
+  position: relative;
+}
+.main form div > input {
+  padding: 1.8em;
+  border: 1px solid var(--Desaturated-Red);
+  border-radius: 50px;
+  width: 506.88px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+.main form div > input::-moz-placeholder {
+  color: var(--Desaturated-Red);
+  font-size: 15.36px;
+  opacity: 0.8;
+}
+.main form div > input:-ms-input-placeholder {
+  color: var(--Desaturated-Red);
+  font-size: 15.36px;
+  opacity: 0.8;
+}
+.main form div > input::placeholder {
+  color: var(--Desaturated-Red);
+  font-size: 15.36px;
+  opacity: 0.8;
+}
+.main form div > input:focus {
+  outline: none;
+}
+.main form div > button {
+  z-index: 3;
+  position: absolute;
+  left: 30em;
+  padding: 1.5em 4em;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background: linear-gradient(122deg, hsl(0deg, 100%, 93%), hsl(0deg, 84%, 70%));
+  box-shadow: 0 20px 20px 0 rgba(209, 161, 161, 0.432);
+  transition: 0.3s;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.main form div > button:hover {
+  background: linear-gradient(122deg, hsl(0deg, 100%, 93%), rgb(244, 204, 204));
+  box-shadow: 0 20px 20px 0 rgba(209, 161, 161, 0.74);
+}
+.main form label {
+  color: var(--Soft-Red);
+  position: absolute;
+  left: 1.5em;
+  top: 4.5em;
+  font-style: italic;
+  visibility: hidden;
+}
+.main form .error {
+  position: absolute;
+  left: 22em;
+  top: 1.2em;
+  visibility: hidden;
+}
+.main .img-sect {
+  background-image: url(/images/hero-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  .main {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .main .img-sect {
+    background-image: url(/images/hero-mobile.jpg);
+    background-size: contain;
+    background-position: 0 70px;
+  }
+  .main .text-sect {
+    position: absolute;
+    top: 20em;
+    padding: 0;
+  }
+  .main .text-sect .logo-cont {
+    position: absolute;
+    left: 2em;
+    top: -18.5em;
+    width: 30vw;
+  }
+  .main .text-sect .logo-cont img {
+    max-width: 100%;
+  }
+  .main .text-sect .text-cont {
+    text-align: center;
+    padding: 1em;
+  }
+  .main .text-sect .text-cont h1 {
+    text-transform: uppercase;
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 8px;
+    margin: 0;
+  }
+  .main .text-sect .text-cont p {
+    font-size: 13px;
+    max-width: none;
+  }
+  .main .text-sect form {
+    margin-top: 0;
+  }
+  .main .text-sect form div {
+    padding: 1em;
+  }
+  .main .text-sect form div input {
+    width: 88vw;
+    padding: 1em;
+  }
+  .main .text-sect form div input::-moz-placeholder {
+    font-size: 11px;
+  }
+  .main .text-sect form div input:-ms-input-placeholder {
+    font-size: 11px;
+  }
+  .main .text-sect form div input::placeholder {
+    font-size: 11px;
+  }
+  .main .text-sect form div button {
+    padding: 9px 25px;
+    left: 18em;
+  }
+}
+/* End main */
