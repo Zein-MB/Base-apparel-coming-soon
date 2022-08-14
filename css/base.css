@@ -143,7 +143,7 @@ body::-webkit-scrollbar {
   visibility: hidden;
 }
 .main .img-sect {
-  background-image: url(/images/hero-desktop.jpg);
+  background-image: url(../images/hero-desktop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
