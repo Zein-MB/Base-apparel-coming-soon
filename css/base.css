@@ -157,7 +157,7 @@ body::-webkit-scrollbar {
     flex-direction: column-reverse;
   }
   .main .img-sect {
-    background-image: url(/images/hero-mobile.jpg);
+    background-image: url(../images/hero-mobile.jpg);
     background-size: contain;
     background-position: 0 70px;
   }
